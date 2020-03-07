@@ -15,4 +15,4 @@ class Point
   }
 }
 $x = new Point(1,4);
-// echo $x;
+echo $x;
