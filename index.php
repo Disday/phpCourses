@@ -15,4 +15,4 @@ function primeOrNot($num)
   }
   return true;
 }
-sayPrimeOrNot(11);
+sayPrimeOrNot(11);123
