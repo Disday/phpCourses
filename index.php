@@ -1,18 +1,7 @@
 <?php
-function sayPrimeOrNot($num)
-{
-  $result = primeOrNot($num) ? 'yes' : 'no';
-  print_r($result);
-}
-function primeOrNot($num)
-{
-  if($num <= 1) return false;
-  for ($i = 2; $i < $num; $i += ($num % $i)) {
-    echo $i, ' ', "\n";
-    if ($num % $i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
-sayPrimeOrNot(11);123
+// use Funct\Collection;
+
+$last = function(string $str){
+    return strlen($str) < 1 ? null : $str[strlen($str) - 1];
+};
+var_dump($last(''));
