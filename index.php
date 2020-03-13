@@ -1,18 +1,9 @@
 <?php
-function sayPrimeOrNot($num)
+function union($first, ...$rest)
 {
-  $result = primeOrNot($num) ? 'yes' : 'no';
-  print_r($result);
+  $merged = array_merge($first, ...$rest);
+  $uniquied = array_unique($merged);
+  $result = array_values($uniquied);
+  return $result;
 }
-function primeOrNot($num)
-{
-  if($num <= 1) return false;
-  for ($i = 2; $i < $num; $i += ($num % $i)) {
-    echo $i, ' ', "\n";
-    if ($num % $i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
-sayPrimeOrNot(11);
+var_dump(union([3, 2], [2, 2, 1])); // ['a', 3, false, true, 5, 8]
