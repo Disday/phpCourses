@@ -1,5 +1,10 @@
 {
-    "require": {
-        "funct/funct": "^1.5"
-    }
+  "name": "disday/project",
+  "description": "123",
+  "type": "project",
+  "minimum-stability": "alpha",
+  "require": {
+    "funct/funct": "^1.5",
+    "tightenco/collect": "^7.1"
+  }
 }

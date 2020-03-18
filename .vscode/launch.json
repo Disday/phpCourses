@@ -5,8 +5,7 @@
     "version": "0.2.0",
     "configurations": [
       
-
-      
+            
         {
             "type": "chrome",
             "request": "launch",
@@ -23,9 +22,6 @@
             "name": "Launch Program",
             "program": "${file}",
             //"program": "${workspaceFolder}",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
         },
 
     ]
