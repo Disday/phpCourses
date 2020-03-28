@@ -1,4 +1,5 @@
 <?php
+namespace App;
 class Point
 {
   public $x;
@@ -15,4 +16,4 @@ class Point
   }
 }
 $x = new Point(1,4);
-echo $x;
+// echo $x;

@@ -6,5 +6,8 @@
   "require": {
     "funct/funct": "^1.5",
     "tightenco/collect": "^7.1"
-  }
+  },
+  "autoload": {
+    "psr-4": {"App\\": "src/"}
+    }
 }

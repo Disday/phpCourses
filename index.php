@@ -1,4 +1,8 @@
 <?php
-$acc[14] = [];
-$acc[13] = [];
-print_r( $acc);
+require __DIR__ . './vendor/autoload.php';
+
+function makeRational($numer, $denom)
+{
+    return "{$numer}/{$denom}";
+}
+echo makeRational(1, 2);
