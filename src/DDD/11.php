@@ -1,29 +1,7 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 
-function normalizer($cities){
+$a = [5, 4];
+$s = 'array_sum';
 
-}
-
-$raw = [
-  [
-      'name' => 'istambul',
-      'country' => 'turkey'
-  ],
-  [
-      'name' => 'Moscow ',
-      'country' => ' Russia'
-  ],
-  [
-      'name' => 'iStambul',
-      'country' => 'tUrkey'
-  ],
-  [
-      'name' => 'antalia',
-      'country' => 'turkeY '
-  ],
-  [
-      'name' => 'samarA',
-      'country' => '  ruSsiA'
-  ],
-];
+echo $s($a);
