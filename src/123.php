@@ -1,41 +1,19 @@
 <?php
-
-namespace qwe;
-
-require_once 'Trees.php';
-
-use function Trees\mkdir;
-use function Trees\mkfile;
-use function Trees\isFile;
-use function Trees\isDirectory;
-
-function map($func, $tree)
+function buildDefinitionList($defs)
 {
-  $map = function ($tree) use (&$map, $func) {
-    $children = $tree['children'] ?? NULL;
-    $newTree = $func($tree);
-    if (empty($children)) {
-      return $newTree;
-    }
-    $newTree['children'] = array_map($map, $children);
-    return $newTree;
-  };
-  return $map($tree);
+  if (empty($defs)){
+    return '';
+  }
+  $result = array_map(function ($elem) use ($defs) {
+    return "<dt>{$elem[0]}</dt><dd>{$elem[1]}</dd>";
+  }, $defs);
+  return '<dl>' . implode('', $result) . '</dl>';
 }
 
-$tree = mkdir('/', [
-  mkdir('eTc', [
-    mkdir('NgiNx'),
-    mkdir('CONSUL', [
-      mkfile('config.json'),
-    ]),
-  ]),
-  mkfile('hOsts'),
-]);
 
-$res = map(function ($n) {
-  return array_merge($n, ['name' => strtoupper($n['name'])]);
-}, $tree);
-
-print_r($res);
-// print_r($tree);
+$definitions = [
+  ['Блямба', 'Выпуклость, утолщения на поверхности чего-либо'],
+  ['Бобр', 'Животное из отряда грызунов'],
+];
+print_r(buildDefinitionList($definitions));
+// => '<dl><dt>Блямба</dt><dd>Выпуклость, утолщение на поверхности чего-либо</dd><dt>Бобр</dt><dd>Животное из отряда грызунов</dd></dl>';
