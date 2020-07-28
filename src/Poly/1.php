@@ -1,7 +1,6 @@
 <?php
-namespace Poly;
-require __DIR__ . '/../../vendor/autoload.php';
-
-$db = new InMemoryKV(['qwe' => 123]);
-$db->set('asd', 'rtbgrb');
-print_r($db->toArray());
+function flatten_and_sort($array) {
+    return array_merge(...$array);
+}
+    print_r(flatten_and_sort([[1, 3, 5], [100], [2, 4, 6]]));
+    // flatten_and_sort([[1, 3, 5], [100], [2, 4, 6]]);
