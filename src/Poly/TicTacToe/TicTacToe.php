@@ -4,6 +4,7 @@ namespace Poly\TicTacToe;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
+
 interface getTurnCoordinates
 {
     public function getTurnCoordinates($state);
