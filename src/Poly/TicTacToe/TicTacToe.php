@@ -4,9 +4,6 @@ namespace Poly\TicTacToe;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
-use Poly\TicTacToe\Strategies\Easy;
-use Poly\TicTacToe\Strategies\Normal;
-
 interface getTurnCoordinates
 {
     public function getTurnCoordinates($state);
@@ -18,11 +15,8 @@ class TicTacToe
     private $state;
     public function __construct($strategy = 'easy')
     {
-        $strategies = [
-            'easy' => new Easy(),
-            'normal' => new Normal()
-        ];
-        $this->strategy = $strategies[$strategy];
+        $className = 'Poly\TicTacToe\Strategies\\' . ucfirst($strategy);
+        $this->strategy = new $className();
         for ($i = 1; $i <= 3; $i++) { // fill matrix from 1 to 3
             $this->state[$i][1] = null;
             $this->state[$i][2] = null;
@@ -79,14 +73,9 @@ class TicTacToe
 }
 
 $game = new TicTacToe('normal');
-var_dump($game->go(1, 3));
-var_dump($game->go());
-var_dump($game->go(2, 3));
+var_dump($game->go(2, 2));
 var_dump($game->go());
 var_dump($game->go(3, 3));
+var_dump($game->go());
+var_dump($game->go(1, 1));
 print_r($game->show());
-// print_r($game);
-// var_dump($game->go(2, 1));
-// var_dump($game->go());
-// var_dump($game->go(2, 3));
-// var_dump($game->go());
