@@ -11,12 +11,13 @@
     "danielstjules/stringy": "^3.1",
     "fzaninotto/faker": "^1.9",
     "symfony/yaml": "^5.1",
-    "hackzilla/password-generator": "^1.5"
+    "hackzilla/password-generator": "^1.5",
+    "php-di/php-di": "^6.2"
   },
   "autoload": {
-    "psr-4": {      
-      
-      "Clock\\":  "src/Poly/AlarmClock/"
+    "psr-4": {            
+      "Clock\\":  "src/Poly/AlarmClock/",
+      "App\\": "src/Poly/DI"
     }
   }
 }
