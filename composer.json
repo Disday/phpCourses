@@ -17,7 +17,8 @@
   "autoload": {
     "psr-4": {            
       "Clock\\":  "src/Poly/AlarmClock/",
-      "App\\": "src/Poly/DI"
+      "App\\": "src/Poly/DI",
+      "App\\Poly\\TcpConnection\\": "src/Poly/TcpConnection"
     }
   }
 }
