@@ -2,25 +2,28 @@
 
 namespace App\Inheritance;
 
+require __DIR__ . '/../../vendor/autoload.php';
+
+
 class HTMLElement
 {
-    public $attributes = [];
+    private $body;
 
-    public function __construct($attributes = [])
+    public function setTextContent($body)
     {
-        $this->attributes = $attributes;
+        $this->body = $body;
     }
 
-    protected function stringifyAttributes()
+    public function __toString()
     {
-        if (count($this->attributes) === 0) {
-            return '';
-        }
-        $line = collect($this->attributes)
-            ->map(function ($item, $key) {
-                return "{$key}=\"{$item}\"";
-            })
-            ->join(' ');
-        return " {$line}";
+        $tag = static::$params['name'];
+        $body = $this->body;
+        return static::$params['pair'] ? "<{$tag}>{$body}</{$tag}>" : "<{$tag}>";
     }
 }
+
+$element = new HTMLBrElement();
+echo $element; // => '<br>'
+$element = new HTMLDivElement();
+$element->setTextContent('hello!');
+echo $element; // => '<div>hello!</div>'
