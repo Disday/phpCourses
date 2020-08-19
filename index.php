@@ -1,10 +1,15 @@
 <?php
- 
-$links = [
-  ['url' => 'https://google.com', 'name' => 'Google'],
-  ['url' => 'https://yandex.com', 'name' => 'Yandex'],
-  ['url' => 'https://bingo.com', 'name' => 'Bingo']
-];
-foreach ($links as $link) : ?>
-  <div><a href=<?= $link['url'] ?>> <?= $link['name'] ?></a></div>
-<?php endforeach; ?>
+
+namespace MyNamespace;
+
+class MyClass
+{
+}
+
+$className = 'MyClass';
+// $object = new $className(); //PHP Fatal error:  Uncaught Error: Class 'MyClass' not found
+
+$className = MyClass::class;
+var_dump($className);
+$object = new $className(); 
+print_r($object); // MyNamespace\MyClass Object
