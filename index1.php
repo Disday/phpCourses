@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App;qwe
 class Time
 {
     private $h;
