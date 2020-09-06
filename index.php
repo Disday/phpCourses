@@ -1,15 +1,7 @@
 <?php
 
-namespace MyNamespace;
-
-class MyClass
+function reverse($number)
 {
+    return $number > 0 ? (int)strrev(abs($number)) : (int) -strrev(abs($number));
 }
-
-$className = 'MyClass';
-// $object = new $className(); //PHP Fatal error:  Uncaught Error: Class 'MyClass' not found
-
-$className = MyClass::class;
-var_dump($className);
-$object = new $className(); 
-print_r($object); // MyNamespace\MyClass Object
+var_dump(reverse('123456'));
