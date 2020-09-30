@@ -1,4 +1,5 @@
 <?php
+new info
 namespace App;asdacdsad
 class Time
 {
