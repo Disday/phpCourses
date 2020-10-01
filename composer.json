@@ -3,6 +3,9 @@
   "description": "123",
   "type": "project",
   "minimum-stability": "alpha",
+  "bin": [
+    "./index.php"
+  ],
   "require": {
     "funct/funct": "^1.5",
     "tightenco/collect": "^7.1",
@@ -15,8 +18,8 @@
     "php-di/php-di": "^6.2"
   },
   "autoload": {
-    "psr-4": {            
-      "Clock\\":  "src/Poly/AlarmClock/",
+    "psr-4": {
+      "Clock\\": "src/Poly/AlarmClock/",
       "App\\": "src/Poly/DI",
       "App\\Poly\\TcpConnection\\": "src/Poly/TcpConnection",
       "App\\Inheritance\\": "src/Inheritance"
