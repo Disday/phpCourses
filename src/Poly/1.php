@@ -1,7 +1,7 @@
 <?php
-namespace Poly;
+
+namespace Poly\TicTacToe;
+// use Toe;
 require __DIR__ . '/../../vendor/autoload.php';
 
-$db = new InMemoryKV(['qwe' => 123]);
-$db->set('asd', 'rtbgrb');
-print_r($db->toArray());
+var_dump((base64_decode('frrh5tbmjp4adl05lm24cobj03')));
