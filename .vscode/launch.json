@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "chrome",
             "request": "launch",
@@ -17,7 +18,7 @@
             "request": "launch",
             "name": "Launch Program",
             // "program": "${file}",
-            "program": "${workspaceFolder}/index.php",
+            "program": "${file}",
             // "program": "${workspaceFolder}",
         },
         {
@@ -25,7 +26,7 @@
             "type": "php",
             "program": "${file}",
             "request": "launch",
-            "port": 9000
+            "port": 80
         }
     ]
 }

@@ -15,7 +15,8 @@
     "fzaninotto/faker": "^1.9",
     "symfony/yaml": "^5.1",
     "hackzilla/password-generator": "^1.5",
-    "php-di/php-di": "^6.2"
+    "php-di/php-di": "^6.2",
+    "phpunit/phpunit": "^9.4"
   },
   "autoload": {
     "psr-4": {
